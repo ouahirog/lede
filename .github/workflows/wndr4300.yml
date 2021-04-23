@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: OpenWrt-CI
+name: OpenWrt-WNDR4300
 
 on:
   schedule:
@@ -42,7 +42,8 @@ jobs:
           
       - name: get source
         run: |
-          sudo mkdir wndr4300
+          cd ~/work
+          mkdir wndr4300
           cd wndr4300
           wget https://downloads.openwrt.org/releases/19.07.7/targets/ar71xx/nand/openwrt-imagebuilder-19.07.7-ar71xx-nand.Linux-x86_64.tar.xz
           xz -d openwrt-imagebuilder-19.07.7-ar71xx-nand.Linux-x86_64.tar.xz

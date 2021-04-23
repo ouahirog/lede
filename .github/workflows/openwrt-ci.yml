@@ -31,7 +31,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: master
-
+          
+      - name: SSH connection to Actions1
+        uses:  P3TERX/ssh2actions@main
+        if: env.SSH_ACTIONS == 'true'
+        
       - name: Space cleanup
         env:
           DEBIAN_FRONTEND: noninteractive
